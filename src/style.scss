@@ -1,0 +1,21 @@
+.audioplayer{
+  width: 200px;
+  height: 200px;
+  //background-color: brown;
+
+  &-timeline{
+    background-color: red;
+    &::-webkit-progress-bar{
+    background-color: red;
+    }
+    &::-webkit-progress-value{
+      background-color: chocolate;
+    }
+  }
+}
+
+// #audioplayer .real-player{
+//   width: inherit;
+//   height: 200px;
+//   background-color: brown;
+// }
