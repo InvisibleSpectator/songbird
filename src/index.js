@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import App from "./progressbar/progressbar.component";
+import App from "./app";
+
 let a = ["s","as","asda"]; 
-ReactDOM.render(<App stages={a}/>, document.querySelector("#root"));
+ReactDOM.render(<App/>, document.querySelector("#root"));
