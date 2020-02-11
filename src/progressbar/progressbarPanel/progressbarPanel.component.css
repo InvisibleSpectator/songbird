@@ -1,0 +1,10 @@
+.progressbar-panel{
+  height:50px;
+  line-height: 50px;
+  width: 120px;
+  text-align: center;
+  background-color: lightcoral;
+}
+.progressbar-panel.active{
+  background-color: lightseagreen;
+}

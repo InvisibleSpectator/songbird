@@ -1,14 +1,9 @@
 import React, { Component } from "react";
 import ProgressbarPanel from "./progressbarPanel/progressbarPanel.component"
-//import "./picture.component.css";
+import "./progressbar.component.css";
 class Progressbar extends Component {
-
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    return <div>{this.props.stages.map((stage,index) => <ProgressbarPanel key={index} text={stage} />)}</div>;
+    return <div className="progressbar">{this.props.stages.map((stage, index) => <ProgressbarPanel key={index} isActive={index === this.props.stage} text={stage} />)}</div>;
   }
 }
 export default Progressbar;
