@@ -1,0 +1,50 @@
+.info{
+  height: auto;
+  width: 400px;
+  margin-left:20px;
+  margin-right:20px;
+  background-color: beige;
+  border: khaki 1px solid;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 160px 60px auto;
+  grid-template-areas: "picture name" "player player" "description description";
+}
+
+.info.empty{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media(max-width:700px){
+  .info{
+    max-width: 100%;
+  }
+}
+.description{
+  grid-area: description;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.player{
+  margin-top: 5px;
+  grid-area: player;
+  width: 100%;
+
+}
+
+.names{
+  grid-area: name;
+}
+
+.name{
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.name, .latin{
+
+  margin-left: 5px;
+}
