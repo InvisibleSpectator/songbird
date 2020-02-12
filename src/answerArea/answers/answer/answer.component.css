@@ -27,6 +27,12 @@
   border: rgb(18, 146, 140) 1px solid;
 }
 
+@media(max-width:920px){
+  .answers{
+    width: calc(100%-40px);
+  }
+}
+
 .answer.wrong{
   background-color: lightcoral;
   border-radius: 3px;

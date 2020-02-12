@@ -18,9 +18,18 @@
   align-items: center;
 }
 
-@media(max-width:700px){
+@media(max-width:920px){
   .info{
-    max-width: 100%;
+    width: calc(100%-40px);
+  }
+}
+
+@media(max-width:520px){
+  .info{
+    grid-template-columns: auto;
+    grid-template-rows: 160px auto 60px auto;
+    grid-template-areas: "picture" "name" "player" "description";
+    justify-items: center;
   }
 }
 .description{
