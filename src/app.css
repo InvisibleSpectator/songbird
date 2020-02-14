@@ -21,6 +21,11 @@ flex-direction: column;
   outline: none;
 }
 
+.next-level.correct{
+  background-color: lightseagreen;
+  border: rgb(18, 146, 140) 1px solid;
+}
+
 .question{
   display: flex;
   justify-content: space-between;

@@ -34,8 +34,8 @@ class App extends Component {
           deltaScore: 5,
           isGuessed: false,
         };
-        if(tmp.stage < birddata.length)
-        tmp.answer = Math.floor(Math.random() * birddata[tmp.stage].length)
+        if (tmp.stage < birddata.length)
+          tmp.answer = Math.floor(Math.random() * birddata[tmp.stage].length)
         return tmp;
       });
     }
@@ -72,11 +72,11 @@ class App extends Component {
         <Header score={this.state.score} />
         <Progressbar stages={stages} stage={this.state.stage} />
         <div className="question">
-        <h2 >{(() => { return !this.state.isGuessed ? "********" : birddata[this.state.stage][this.state.answer].name })()}</h2>
-        <Picture src={(() => { return !this.state.isGuessed ? plug : birddata[this.state.stage][this.state.answer].image })()} />
-        </div>        
+          <h2 >{(() => { return !this.state.isGuessed ? "********" : birddata[this.state.stage][this.state.answer].name })()}</h2>
+          <Picture src={(() => { return !this.state.isGuessed ? plug : birddata[this.state.stage][this.state.answer].image })()} />
+        </div>
         <Player src={birddata[this.state.stage][this.state.answer].audio} />
-        <button className="next-level" onClick={this.nextStage}>{(() => this.state.stage === birddata.length - 1 ? "Завершить" : "Дальше")()}</button>
+        <button className={(() => {let classes = this.state.isGuessed ? " correct" : ""; return classes+" next-level" })()} onClick={this.nextStage}>{(() => this.state.stage === birddata.length - 1 ? "Завершить" : "Дальше")()}</button>
         <AnswerArea key={this.state.stage} getAnswer={this.getAnswer} isGuessed={this.state.isGuessed} stage={this.state.stage} answer={this.state.answer} birds={birddata[this.state.stage]} />
       </div>
     else
@@ -85,7 +85,7 @@ class App extends Component {
         <div>
           <h2>Вы прошли игру</h2>
           <p>Ваш счёт {this.state.score} из 30</p>
-          <button  className="next-level" onClick={this.restart}>Заново</button>
+          <button className="next-level" onClick={this.restart}>Заново</button>
         </div>
       </div>
   }
