@@ -1,0 +1,15 @@
+.progressbar-panel{
+  height:50px;
+  line-height: 50px;
+  width: 120px;
+  text-align: center;
+  background-color: lightcoral;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 3px;
+  border: rgb(231, 95, 95) 1px solid;
+}
+.progressbar-panel.active{
+  background-color: lightseagreen;
+  border: rgb(18, 146, 140) 1px solid;
+}
